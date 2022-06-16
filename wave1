@@ -1,0 +1,47 @@
+In Wave 01, we will explore the starter code for Task List Front End.
+
+Read through the code in App.js, TaskList.js and Task.js and their style sheets to understand how data and events are being handled. You may use the following questions and suggestions to guide your exploration:
+
+What props does Task have? Where do they come from?
+
+- The props are: id, title, isComplete. They come from taskList
+
+The Task component uses destructuring to read in the props const Task = ({ id, title, isComplete }) => {...
+How would the code change if {id, title, isComplete} were replaced with props?
+
+- props.id
+- props.title
+- props.isComplete
+
+Consider making this change and the subsequent necessary changes through the rest of the component to deepen your understanding of the code.
+
+- made changes on line 6, 7 and 16
+
+How is the strikethrough style applied when the task title is clicked?
+
+- via className=tasks**item**toggle--completed
+
+Consider updating the appropriate rule sets to change the text or background color when a task is marked complete.
+
+- not sure
+
+What props does TaskList have? Where do they come from?
+
+- tasks
+  Where is the function getTaskListJSX called in TaskList?
+- line 7
+
+How would the code change without this helper function?
+
+- Without the helper function We wouldn't be passing in the task components and would make each task individually
+
+What component is TASKS passed to in App?
+
+- Tasklists
+
+How does the component pass TASKS?
+passing it in as a prop called tasks on line 25
+
+What element is the component wrapped in?
+
+- it's wrapped in a div container
