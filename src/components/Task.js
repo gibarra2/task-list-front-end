@@ -6,21 +6,11 @@ import './Task.css';
 const Task = (props) => {
   const buttonClass = props.isComplete ? 'tasks__item__toggle--completed' : '';
 
-  const onClickTask = () => {
-    const completedTask = {
-      id: props.id,
-      title: props.title,
-      isComplete: !props.isComplete,
-    };
-
-    props.onCompletion(completedTask);
-  };
-
   return (
     <li className="tasks__item">
       <button
         className={`tasks__item__toggle ${buttonClass}`}
-        onClick={onClickTask}
+        onClick={() => props.onCompletion(props.id)}
       >
         {props.title}
       </button>

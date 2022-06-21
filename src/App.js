@@ -18,10 +18,11 @@ const TASKS = [
 const App = () => {
   const [taskData, setTaskData] = useState(TASKS);
 
-  const onCompletion = (updatedTask) => {
+  const onCompletion = (completedID) => {
     let updatedTaskData = taskData.map((task) => {
-      if (updatedTask.id === task.id) {
-        return updatedTask;
+      if (completedID === task.id) {
+        task.isComplete = !task.isComplete;
+        return task;
       } else {
         return task;
       }
